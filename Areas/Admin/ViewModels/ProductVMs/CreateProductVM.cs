@@ -1,6 +1,6 @@
 ﻿using Agency.Models;
 using System.ComponentModel.DataAnnotations;
-namespace Agency.Areas.Admin.ViewModels.Product
+namespace Agency.Areas.Admin.ViewModels
 {
     public class CreateProductVM
     {

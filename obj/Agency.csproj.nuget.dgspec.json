@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ca.r214.05\\Desktop\\Agency\\Agency.csproj": {}
+    "C:\\Users\\Asus\\Desktop\\Agency\\Agency.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ca.r214.05\\Desktop\\Agency\\Agency.csproj": {
+    "C:\\Users\\Asus\\Desktop\\Agency\\Agency.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ca.r214.05\\Desktop\\Agency\\Agency.csproj",
+        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\Agency\\Agency.csproj",
         "projectName": "Agency",
-        "projectPath": "C:\\Users\\ca.r214.05\\Desktop\\Agency\\Agency.csproj",
-        "packagesPath": "C:\\Users\\ca.r214.05\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ca.r214.05\\Desktop\\Agency\\obj\\",
+        "projectPath": "C:\\Users\\Asus\\Desktop\\Agency\\Agency.csproj",
+        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Asus\\Desktop\\Agency\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ca.r214.05\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

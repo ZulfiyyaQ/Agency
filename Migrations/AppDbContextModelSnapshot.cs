@@ -35,7 +35,7 @@ namespace Agency.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Agency.Models.Product", b =>
@@ -64,7 +64,7 @@ namespace Agency.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Agency.Models.Setting", b =>
@@ -85,7 +85,7 @@ namespace Agency.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("Agency.Models.Product", b =>
