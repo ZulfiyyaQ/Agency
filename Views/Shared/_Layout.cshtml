@@ -37,6 +37,15 @@
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                       
+                        <li class="nav-item"><a class="nav-link" asp-action="LogOut" asp-controller="Account" asp-area="Admin">Log Out</a></li>
+                    }
+                    else{
+                        <li class="nav-item"><a class="nav-link" asp-action="register" asp-controller="Account" asp-area="Admin">Login</a></li>
+                       
+                    }
                 </ul>
             </div>
         </div>

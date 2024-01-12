@@ -492,3 +492,8 @@ C:\Users\Asus\Desktop\Agency\obj\Debug\net6.0\refint\Agency.dll
 C:\Users\Asus\Desktop\Agency\obj\Debug\net6.0\Agency.pdb
 C:\Users\Asus\Desktop\Agency\obj\Debug\net6.0\Agency.genruntimeconfig.cache
 C:\Users\Asus\Desktop\Agency\obj\Debug\net6.0\ref\Agency.dll
+C:\Users\Asus\Desktop\Agency\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Asus\Desktop\Agency\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Asus\Desktop\Agency\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Asus\Desktop\Agency\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Asus\Desktop\Agency\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

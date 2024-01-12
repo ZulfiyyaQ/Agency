@@ -46,7 +46,7 @@ namespace Agency.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Update(int id)
         {
-            Category existed= await _context.Categories.FirstOrDefaultAsync();
+            Category existed= await _context.Categories.FirstOrDefaultAsync(c => c.Id == id);
             if (existed == null) return NotFound();
             UpdateCategoryVM vm = new UpdateCategoryVM 
             { 
@@ -60,7 +60,7 @@ namespace Agency.Areas.Admin.Controllers
             if (!ModelState.IsValid) return View();
             Category existed= await _context.Categories.FirstOrDefaultAsync(c=>c.Id==id);
             if (existed == null) return NotFound();
-            bool result = _context.Categories.Any(c=>c.Name.ToLower().Trim()==categoryVM.Name.ToLower().Trim());
+            bool result = _context.Categories.Any(c=>c.Name.ToLower().Trim()==categoryVM.Name.ToLower().Trim() && c.Id != id);
             if (result) 
             {
                 ModelState.AddModelError("Name", "Bele Category artiq movcutdur");
@@ -83,7 +83,7 @@ namespace Agency.Areas.Admin.Controllers
         }
         public async Task<IActionResult> Detail(int id)
         {
-            var category = await _context.Categories.Include(c => c.Products).FirstOrDefaultAsync();
+            var category = await _context.Categories.Include(c => c.Products).FirstOrDefaultAsync(x => x.Id == id);
             if (category is null) return NotFound();
             return View(category);
         }

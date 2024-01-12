@@ -1,9 +1,11 @@
 ﻿using Agency.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Agency.DAL
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions<AppDbContext> opt):base(opt)
         {

@@ -5,13 +5,13 @@ namespace Agency.Utilities.Extensions
 {
     public static class FileValidator
     {
-        public static bool ValidateType(IFormFile file,string type="image/")
+        public static bool ValidateType( this IFormFile file,string type="image/")
         {
             if (file.ContentType.Contains(type)) return true;
             return false;
            
         }
-        public static bool ValidateSize(IFormFile file, int kb)
+        public static bool ValidateSize(this IFormFile file, int kb)
         {
             if (file.Length<=kb*1024) return true;
             return false;
@@ -25,7 +25,7 @@ namespace Agency.Utilities.Extensions
         }
 
 
-        public static async Task<string> CreateFile(IFormFile file,params string[] folders)
+        public static async Task<string> CreateFile(this IFormFile file,params string[] folders)
         {
             string filename = file.GenerateName();
             string path = folders.Aggregate(Path.Combine);
