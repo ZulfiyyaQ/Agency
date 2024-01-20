@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Agency.DAL
 {
-    public class AppDbContext:IdentityDbContext<AppUser>
+    public class AppDbContext:IdentityDbContext<AppUser,IdentityRole,string>
     {
         public AppDbContext(DbContextOptions<AppDbContext> opt):base(opt)
         {

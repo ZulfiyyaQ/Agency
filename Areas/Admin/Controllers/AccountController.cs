@@ -10,11 +10,13 @@ namespace Agency.Areas.Admin.Controllers
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public AccountController(UserManager<AppUser> userManager,SignInManager <AppUser> signInManager)
+        public AccountController(UserManager<AppUser> userManager,SignInManager <AppUser> signInManager,RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;  
             _signInManager = signInManager;
+           _roleManager = roleManager;
         }
         public IActionResult Register()
         {
@@ -77,7 +79,16 @@ namespace Agency.Areas.Admin.Controllers
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(nameof(Login));
+        }
+
+        public async Task<IActionResult> CreateRoles()
+        {
+            await _roleManager.CreateAsync(new IdentityRole
+            {
+                Name = "admin"
+            });
+            return RedirectToAction("Index","Home");
         }
     }
 }
